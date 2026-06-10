@@ -10,7 +10,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body{
@@ -24,22 +24,18 @@ nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(0,0,0,0.6);
-  backdrop-filter: blur(8px);
+  background:rgba(0,0,0,0.65);
   padding:12px;
   text-align:center;
   z-index:1000;
+  backdrop-filter: blur(6px);
 }
 
 nav a{
   color:white;
-  margin:0 12px;
+  margin:0 10px;
   text-decoration:none;
   font-size:14px;
-}
-
-nav a:hover{
-  color:#2ecc71;
 }
 
 /* HERO */
@@ -59,14 +55,13 @@ nav a:hover{
 }
 
 .hero h1{
-  font-size:50px;
-  margin-bottom:10px;
+  font-size:52px;
 }
 
 .hero p{
-  max-width:600px;
+  max-width:650px;
+  margin-top:10px;
   font-size:18px;
-  opacity:0.9;
 }
 
 .btn{
@@ -76,14 +71,12 @@ nav a:hover{
   border:none;
   border-radius:10px;
   color:white;
-  font-size:16px;
   cursor:pointer;
   transition:0.3s;
 }
 
 .btn:hover{
   transform:scale(1.05);
-  background:#27ae60;
 }
 
 /* SEÇÕES */
@@ -91,12 +84,6 @@ section{
   max-width:1000px;
   margin:80px auto;
   padding:20px;
-  animation:fadeUp 1s ease;
-}
-
-@keyframes fadeUp{
-  from{opacity:0; transform:translateY(30px);}
-  to{opacity:1; transform:translateY(0);}
 }
 
 h2{
@@ -105,13 +92,19 @@ h2{
   margin-bottom:20px;
 }
 
-/* CARDS */
 .card{
   background:white;
   padding:20px;
-  border-radius:14px;
-  box-shadow:0 6px 20px rgba(0,0,0,0.1);
   margin-top:15px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
 }
 
 /* FOOTER */
@@ -131,6 +124,8 @@ footer{
 <nav>
   <a href="#home">Início</a>
   <a href="#sobre">Sobre</a>
+  <a href="#problemas">Problemas</a>
+  <a href="#solucoes">Soluções</a>
   <a href="#objetivo">Objetivo</a>
   <a href="#creditos">Créditos</a>
 </nav>
@@ -138,9 +133,7 @@ footer{
 <!-- HERO -->
 <div class="hero" id="home">
   <h1>AgroVision 2026 🌱</h1>
-  <p>
-    Tecnologia e sustentabilidade unidas para transformar o futuro da agricultura.
-  </p>
+  <p>Tecnologia e sustentabilidade transformando o futuro da agricultura.</p>
 
   <button class="btn" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">
     Explorar projeto
@@ -152,10 +145,53 @@ footer{
   <h2>Sobre o projeto</h2>
   <div class="card">
     <p>
-      O AgroVision 2026 é uma proposta que une tecnologia e sustentabilidade,
-      permitindo monitoramento inteligente das lavouras para reduzir desperdícios,
-      aumentar produtividade e preservar o meio ambiente.
+      O AgroVision 2026 une tecnologia e sustentabilidade para criar um sistema
+      de agricultura mais inteligente, reduzindo desperdícios e melhorando o uso dos recursos naturais.
     </p>
+  </div>
+</section>
+
+<!-- PROBLEMAS -->
+<section id="problemas">
+  <h2>Problemas identificados</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🌱 Desperdício de recursos</h3>
+      <p>Uso excessivo de água e insumos agrícolas.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌍 Impacto ambiental</h3>
+      <p>Práticas que afetam o solo e o meio ambiente.</p>
+    </div>
+
+    <div class="card">
+      <h3>📉 Baixa eficiência</h3>
+      <p>Produção sem monitoramento inteligente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÕES -->
+<section id="solucoes">
+  <h2>Soluções propostas</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>📡 Monitoramento inteligente</h3>
+      <p>Sensores para análise do solo e clima.</p>
+    </div>
+
+    <div class="card">
+      <h3>💧 Uso eficiente da água</h3>
+      <p>Sistemas de irrigação controlados.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌾 Agricultura sustentável</h3>
+      <p>Redução de desperdícios e aumento da produtividade.</p>
+    </div>
   </div>
 </section>
 
@@ -165,7 +201,7 @@ footer{
   <div class="card">
     <p>
       Promover o equilíbrio entre produção agrícola e preservação ambiental,
-      contribuindo para um futuro sustentável.
+      garantindo um futuro sustentável para as próximas gerações.
     </p>
   </div>
 </section>
