@@ -6,36 +6,29 @@
 <title>AgroVision 2026</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
-
 body{
-  background:#f4f7f5;
-  color:#1d2b1d;
-  scroll-behavior:smooth;
+  margin:0;
+  font-family:Arial;
+  background:#f5f7f5;
+  color:#1b2a1b;
+  overflow-x:hidden;
 }
 
-/* MENU */
-nav{
+/* PARTÍCULAS */
+#particles{
   position:fixed;
-  top:0;
   width:100%;
-  background:rgba(0,0,0,0.65);
-  padding:12px;
-  text-align:center;
-  z-index:1000;
-  backdrop-filter: blur(6px);
+  height:100%;
+  z-index:-1;
+  background: radial-gradient(circle, #2ecc71 1px, transparent 1px);
+  background-size:40px 40px;
+  opacity:0.08;
+  animation: move 20s linear infinite;
 }
 
-nav a{
-  color:white;
-  margin:0 10px;
-  text-decoration:none;
-  font-size:14px;
+@keyframes move{
+  from{transform:translateY(0);}
+  to{transform:translateY(-200px);}
 }
 
 /* HERO */
@@ -47,57 +40,33 @@ nav a{
   align-items:center;
   text-align:center;
   color:white;
-  padding:20px;
-
   background:
-  linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
   url('https://images.unsplash.com/photo-1523741543316-beb7fc7023d8') center/cover;
 }
 
-.hero h1{
-  font-size:52px;
-}
-
-.hero p{
-  max-width:650px;
-  margin-top:10px;
-  font-size:18px;
-}
-
-.btn{
-  margin-top:20px;
-  padding:12px 22px;
-  background:#2ecc71;
-  border:none;
-  border-radius:10px;
-  color:white;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.05);
-}
+.hero h1{font-size:60px;}
+.hero p{max-width:700px}
 
 /* SEÇÕES */
 section{
-  max-width:1000px;
-  margin:80px auto;
+  max-width:1100px;
+  margin:100px auto;
   padding:20px;
 }
 
 h2{
   border-left:6px solid #2ecc71;
-  padding-left:10px;
-  margin-bottom:20px;
+  padding-left:12px;
 }
 
+/* CARDS */
 .card{
   background:white;
   padding:20px;
-  margin-top:15px;
   border-radius:12px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  margin-top:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
 
 /* GRID */
@@ -107,122 +76,122 @@ h2{
   gap:15px;
 }
 
+/* MAPA SIMULADO */
+.map{
+  height:300px;
+  border-radius:12px;
+  background:
+    linear-gradient(135deg,#2ecc71,#27ae60);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size:20px;
+}
+
 /* FOOTER */
 footer{
   text-align:center;
-  padding:30px;
-  background:#1d2b1d;
+  padding:40px;
+  background:#122112;
   color:white;
-  margin-top:60px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- MENU -->
-<nav>
-  <a href="#home">Início</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#problemas">Problemas</a>
-  <a href="#solucoes">Soluções</a>
-  <a href="#objetivo">Objetivo</a>
-  <a href="#creditos">Créditos</a>
-</nav>
+<div id="particles"></div>
 
 <!-- HERO -->
-<div class="hero" id="home">
+<div class="hero">
   <h1>AgroVision 2026 🌱</h1>
-  <p>Tecnologia e sustentabilidade transformando o futuro da agricultura.</p>
-
-  <button class="btn" onclick="document.getElementById('sobre').scrollIntoView({behavior:'smooth'})">
-    Explorar projeto
-  </button>
+  <p>Um sistema integrado de tecnologia agrícola, sustentabilidade e inovação para o futuro da produção rural.</p>
 </div>
 
-<!-- SOBRE -->
-<section id="sobre">
-  <h2>Sobre o projeto</h2>
+<!-- CONTEXTO -->
+<section>
+  <h2>Contexto científico</h2>
   <div class="card">
     <p>
-      O AgroVision 2026 une tecnologia e sustentabilidade para criar um sistema
-      de agricultura mais inteligente, reduzindo desperdícios e melhorando o uso dos recursos naturais.
+      A agricultura moderna exige equilíbrio entre produtividade e preservação ambiental.
+      O AgroVision 2026 propõe uma abordagem baseada em tecnologia para otimizar recursos naturais.
     </p>
+  </div>
+</section>
+
+<!-- MAPA INTERATIVO -->
+<section>
+  <h2>Mapa de monitoramento agrícola</h2>
+  <div class="map">
+    🌍 Regiões agrícolas monitoradas em tempo real (simulação visual)
+  </div>
+</section>
+
+<!-- GRÁFICO REAL -->
+<section>
+  <h2>Impacto do projeto</h2>
+
+  <div class="card">
+    <canvas id="grafico"></canvas>
   </div>
 </section>
 
 <!-- PROBLEMAS -->
-<section id="problemas">
-  <h2>Problemas identificados</h2>
+<section>
+  <h2>Problemas globais</h2>
 
   <div class="grid">
-    <div class="card">
-      <h3>🌱 Desperdício de recursos</h3>
-      <p>Uso excessivo de água e insumos agrícolas.</p>
-    </div>
-
-    <div class="card">
-      <h3>🌍 Impacto ambiental</h3>
-      <p>Práticas que afetam o solo e o meio ambiente.</p>
-    </div>
-
-    <div class="card">
-      <h3>📉 Baixa eficiência</h3>
-      <p>Produção sem monitoramento inteligente.</p>
-    </div>
+    <div class="card">🌱 Desperdício de recursos naturais</div>
+    <div class="card">🌍 Impacto ambiental crescente</div>
+    <div class="card">📉 Baixa automação agrícola</div>
   </div>
 </section>
 
 <!-- SOLUÇÕES -->
-<section id="solucoes">
-  <h2>Soluções propostas</h2>
+<section>
+  <h2>Soluções tecnológicas</h2>
 
   <div class="grid">
-    <div class="card">
-      <h3>📡 Monitoramento inteligente</h3>
-      <p>Sensores para análise do solo e clima.</p>
-    </div>
-
-    <div class="card">
-      <h3>💧 Uso eficiente da água</h3>
-      <p>Sistemas de irrigação controlados.</p>
-    </div>
-
-    <div class="card">
-      <h3>🌾 Agricultura sustentável</h3>
-      <p>Redução de desperdícios e aumento da produtividade.</p>
-    </div>
-  </div>
-</section>
-
-<!-- OBJETIVO -->
-<section id="objetivo">
-  <h2>Objetivo</h2>
-  <div class="card">
-    <p>
-      Promover o equilíbrio entre produção agrícola e preservação ambiental,
-      garantindo um futuro sustentável para as próximas gerações.
-    </p>
+    <div class="card">📡 Sensores inteligentes</div>
+    <div class="card">💧 Irrigação automatizada</div>
+    <div class="card">🧠 Análise de dados agrícolas</div>
   </div>
 </section>
 
 <!-- CRÉDITOS -->
-<section id="creditos">
+<section>
   <h2>Créditos</h2>
-
   <div class="card">
-    <h3>👨‍🎓 Desenvolvedor</h3>
-    <p>Bruno Fahr</p>
-
-    <h3>🏫 Escola</h3>
-    <p>Colégio Estadual Jorge Queiroz Netto</p>
+    <p><b>Desenvolvedor:</b> Bruno Fahr</p>
+    <p><b>Escola:</b> Colégio Estadual Jorge Queiroz Netto</p>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  AgroVision 2026 • Projeto Agrinho
+AgroVision 2026 • Projeto Agrinho
 </footer>
+
+<!-- GRÁFICO SCRIPT -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+const ctx = document.getElementById('grafico');
+
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Água', 'Produtividade', 'Desperdício', 'Sustentabilidade'],
+    datasets: [{
+      label: 'Impacto (%)',
+      data: [40, 80, 35, 90],
+      backgroundColor: '#2ecc71'
+    }]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
 
 </body>
 </html>
