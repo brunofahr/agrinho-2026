@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AgroVision 2026 | Sistema Global</title>
+<title>AgroVision 2026</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <style>
@@ -20,26 +19,19 @@
 body{
   background:#f6f8f7;
   color:#0f1a10;
-  overflow-x:hidden;
 }
 
-/* PARTÍCULAS LEVES */
-#particles{
+/* partículas leves */
+#bg{
   position:fixed;
   inset:0;
-  background: radial-gradient(circle, #2ecc71 1px, transparent 1px);
+  background: radial-gradient(#2ecc71 1px, transparent 1px);
   background-size:40px 40px;
-  opacity:0.07;
-  animation: move 25s linear infinite;
+  opacity:0.06;
   z-index:-1;
 }
 
-@keyframes move{
-  from{transform:translateY(0);}
-  to{transform:translateY(-200px);}
-}
-
-/* NAV */
+/* nav */
 nav{
   position:fixed;
   top:0;
@@ -53,14 +45,14 @@ nav{
 
 nav a{
   color:white;
-  margin:0 12px;
+  margin:0 10px;
   text-decoration:none;
   font-size:14px;
 }
 
 nav a:hover{color:#2ecc71}
 
-/* HERO */
+/* hero */
 .hero{
   height:100vh;
   display:flex;
@@ -79,10 +71,10 @@ nav a:hover{color:#2ecc71}
 .hero h1{font-size:64px;}
 .hero p{max-width:800px; margin-top:10px}
 
-/* SEÇÕES */
+/* sections */
 section{
-  max-width:1200px;
-  margin:110px auto;
+  max-width:1100px;
+  margin:100px auto;
   padding:20px;
 }
 
@@ -90,41 +82,36 @@ h2{
   font-size:28px;
   border-left:6px solid #2ecc71;
   padding-left:12px;
-  margin-bottom:25px;
+  margin-bottom:20px;
 }
 
-/* CARDS */
+/* cards */
 .card{
   background:white;
   padding:22px;
   border-radius:16px;
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
-  transition:0.3s;
 }
 
-.card:hover{
-  transform:translateY(-4px);
-}
-
-/* GRID */
+/* grid */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:15px;
 }
 
-/* STATS */
+/* stats */
 .stats{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-  text-align:center;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
 }
 
 .stat{
   background:white;
-  padding:28px;
+  padding:25px;
   border-radius:16px;
+  text-align:center;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
@@ -133,139 +120,146 @@ h2{
   color:#2ecc71;
 }
 
-/* MAPA */
+/* mapa */
 .map{
-  height:400px;
+  height:380px;
   border-radius:16px;
   overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* GRAFICO */
-.chartBox{
+/* gráfico */
+.chart{
   background:white;
   padding:20px;
   border-radius:16px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* FOOTER */
+/* footer */
 footer{
   background:#0b1410;
   color:white;
   text-align:center;
-  padding:60px;
-  margin-top:120px;
+  padding:50px;
+  margin-top:100px;
 }
 </style>
 </head>
 
 <body>
 
-<div id="particles"></div>
+<div id="bg"></div>
 
-<!-- NAV -->
 <nav>
   <a href="#inicio">Início</a>
   <a href="#contexto">Contexto</a>
   <a href="#impacto">Impacto</a>
   <a href="#mapa">Mapa</a>
   <a href="#dados">Dados</a>
-  <a href="#acoes">Ações</a>
 </nav>
 
 <!-- HERO -->
 <div class="hero" id="inicio">
   <h1>AgroVision 2026 🌍</h1>
   <p>
-    Sistema global de agricultura inteligente que integra tecnologia, dados e sustentabilidade
-    para otimizar a produção alimentar e reduzir impactos ambientais.
+    Sistema inteligente de agricultura sustentável que integra tecnologia,
+    dados e inovação para otimizar recursos e reduzir impactos ambientais.
   </p>
 </div>
 
 <!-- CONTEXTO -->
 <section id="contexto">
-  <h2>Contexto global</h2>
-  <div class="card">
-    <p>
-      A agricultura moderna enfrenta desafios relacionados à demanda crescente por alimentos,
-      mudanças climáticas e uso intensivo de recursos naturais.
-    </p>
-  </div>
+<h2>Contexto global</h2>
+
+<div class="card">
+<p>
+A agricultura mundial enfrenta desafios relacionados ao crescimento populacional,
+mudanças climáticas e limitação de recursos naturais.
+</p>
+
+<p>
+A integração entre tecnologia e produção agrícola é essencial para garantir
+segurança alimentar e sustentabilidade no futuro.
+</p>
+</div>
 </section>
 
 <!-- IMPACTO -->
 <section id="impacto">
-  <h2>Indicadores de impacto</h2>
+<h2>Indicadores de impacto</h2>
 
-  <div class="stats">
-    <div class="stat">
-      <h3>↓ 45%</h3>
-      <p>Consumo de água</p>
-    </div>
+<div class="stats">
+<div class="stat">
+<h3>45%</h3>
+<p>Menos uso de água</p>
+</div>
 
-    <div class="stat">
-      <h3>↑ 78%</h3>
-      <p>Eficiência produtiva</p>
-    </div>
+<div class="stat">
+<h3>78%</h3>
+<p>Mais eficiência</p>
+</div>
 
-    <div class="stat">
-      <h3>↑ 88%</h3>
-      <p>Sustentabilidade</p>
-    </div>
-  </div>
+<div class="stat">
+<h3>88%</h3>
+<p>Sustentabilidade</p>
+</div>
+</div>
 </section>
 
 <!-- MAPA -->
 <section id="mapa">
-  <h2>Mapa agrícola global</h2>
-  <div class="map">
-    <iframe
-      src="https://www.openstreetmap.org/export/embed.html"
-      style="width:100%;height:100%;border:none;">
-    </iframe>
-  </div>
+<h2>Monitoramento agrícola</h2>
+
+<div class="map">
+<iframe
+src="https://www.openstreetmap.org/export/embed.html"
+style="width:100%;height:100%;border:none;">
+</iframe>
+</div>
 </section>
 
-<!-- GRAFICO -->
+<!-- DADOS -->
 <section id="dados">
-  <h2>Análise de dados</h2>
+<h2>Análise de dados</h2>
 
-  <div class="chartBox">
-    <canvas id="grafico"></canvas>
-  </div>
+<div class="chart">
+<canvas id="grafico"></canvas>
+</div>
 </section>
 
 <!-- AÇÕES -->
-<section id="acoes">
-  <h2>Ações estratégicas</h2>
+<section>
+<h2>Ações estratégicas</h2>
 
-  <div class="grid">
-    <div class="card">📡 Sensores agrícolas inteligentes</div>
-    <div class="card">💧 Gestão eficiente da água</div>
-    <div class="card">🧠 IA para tomada de decisão</div>
-  </div>
+<div class="grid">
+<div class="card">📡 Sensores no solo</div>
+<div class="card">💧 Irrigação inteligente</div>
+<div class="card">🧠 Inteligência artificial agrícola</div>
+</div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-AgroVision 2026 • Sistema Global de Agricultura Inteligente • Projeto Educacional
+AgroVision 2026 • Projeto Agrinho • Agricultura Inteligente e Sustentável
 </footer>
 
 <script>
 new Chart(document.getElementById("grafico"), {
-  type: "bar",
-  data: {
-    labels: ["Água", "Produtividade", "Desperdício", "Sustentabilidade"],
-    datasets: [{
-      label: "Indicadores (%)",
-      data: [45, 78, 30, 88],
-      backgroundColor: "#2ecc71"
-    }]
-  },
-  options: {
-    responsive: true
-  }
+type: "line",
+data: {
+labels: ["2020","2021","2022","2023","2024","2025","2026"],
+datasets: [{
+label: "Eficiência agrícola (%)",
+data: [52,58,63,70,76,83,88],
+borderColor: "#2ecc71",
+backgroundColor: "rgba(46,204,113,0.2)",
+fill: true,
+tension: 0.3
+}]
+},
+options: {
+responsive:true
+}
 });
 </script>
 
