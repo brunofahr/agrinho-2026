@@ -5,116 +5,211 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EcoAgro Connect</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f4f7f2;
-    color:#333;
-}
-
-header{
-    background:linear-gradient(135deg,#2e7d32,#66bb6a);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-}
-
-header h1{
-    font-size:3rem;
-}
-
-header p{
-    margin-top:15px;
-    font-size:1.2rem;
+background:#f5f7f2;
+color:#222;
 }
 
 nav{
-    background:#1b5e20;
-    padding:15px;
-    text-align:center;
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.85);
+padding:15px;
+text-align:center;
+z-index:1000;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:600;
+}
+
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=2000');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.3rem;
+max-width:700px;
+margin:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#4CAF50;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-weight:bold;
 }
 
 section{
-    padding:60px 10%;
+padding:100px 10%;
+}
+
+.titulo{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:40px;
+color:#2e7d32;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
 }
 
 .card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    margin-top:20px;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
 }
 
 footer{
-    background:#1b5e20;
-    color:white;
-    text-align:center;
-    padding:20px;
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.5rem;
+}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>🌱 EcoAgro Connect</h1>
-    <p>Tecnologia e sustentabilidade para o futuro do campo</p>
-</header>
-
 <nav>
-    <a href="#problema">Problema</a>
-    <a href="#solucao">Solução</a>
-    <a href="#beneficios">Benefícios</a>
-    <a href="#equipe">Equipe</a>
+<a href="#problema">Problema</a>
+<a href="#solucao">Solução</a>
+<a href="#beneficios">Benefícios</a>
+<a href="#equipe">Equipe</a>
 </nav>
 
+<header>
+<div class="hero">
+<h1>🌱 EcoAgro Connect</h1>
+<p>Tecnologia inteligente para uma agricultura mais sustentável e produtiva.</p>
+<a href="#problema" class="btn">Conheça o Projeto</a>
+</div>
+</header>
+
 <section id="problema">
-    <h2>Problema</h2>
-    <div class="card">
-        O desperdício de água e recursos agrícolas impacta a produção e o meio ambiente.
-    </div>
+<h2 class="titulo">O Problema</h2>
+
+<div class="cards">
+<div class="card">
+<h3>💧 Desperdício de Água</h3>
+<p>Muitas propriedades utilizam mais água do que o necessário.</p>
+</div>
+
+<div class="card">
+<h3>🌎 Impacto Ambiental</h3>
+<p>O uso inadequado de recursos prejudica o meio ambiente.</p>
+</div>
+
+<div class="card">
+<h3>📉 Baixa Eficiência</h3>
+<p>Sem monitoramento, a produção pode ser menos eficiente.</p>
+</div>
+</div>
 </section>
 
 <section id="solucao">
-    <h2>Solução</h2>
-    <div class="card">
-        O EcoAgro Connect utiliza sensores e monitoramento inteligente para ajudar produtores a usar recursos de forma eficiente.
-    </div>
+<h2 class="titulo">Nossa Solução</h2>
+
+<div class="cards">
+<div class="card">
+<h3>📡 Sensores Inteligentes</h3>
+<p>Monitoram a umidade do solo em tempo real.</p>
+</div>
+
+<div class="card">
+<h3>📱 Aplicativo</h3>
+<p>Permite acompanhar os dados diretamente do celular.</p>
+</div>
+
+<div class="card">
+<h3>♻️ Sustentabilidade</h3>
+<p>Reduz desperdícios e preserva recursos naturais.</p>
+</div>
+</div>
 </section>
 
 <section id="beneficios">
-    <h2>Benefícios</h2>
-    <div class="card">
-        ✔ Economia de água<br>
-        ✔ Maior produtividade<br>
-        ✔ Menos impacto ambiental<br>
-        ✔ Agricultura mais sustentável
-    </div>
+<h2 class="titulo">Benefícios</h2>
+
+<div class="cards">
+<div class="card">
+<h3>💰 Economia</h3>
+<p>Menor gasto com água e energia.</p>
+</div>
+
+<div class="card">
+<h3>🌾 Mais Produção</h3>
+<p>Melhor aproveitamento dos recursos agrícolas.</p>
+</div>
+
+<div class="card">
+<h3>🌍 Futuro Sustentável</h3>
+<p>Equilíbrio entre produção e preservação ambiental.</p>
+</div>
+</div>
 </section>
 
 <section id="equipe">
-    <h2>Equipe</h2>
-    <div class="card">
-        Projeto desenvolvido para o Agrinho 2026.
-    </div>
+<h2 class="titulo">Equipe</h2>
+
+<div class="card">
+<h3>🏆 Projeto Agrinho 2026</h3>
+<p>Desenvolvido para promover inovação e sustentabilidade no campo.</p>
+</div>
 </section>
 
 <footer>
-    © 2026 EcoAgro Connect
+© 2026 EcoAgro Connect | Projeto Agrinho
 </footer>
 
 </body>
