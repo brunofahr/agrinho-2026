@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AgroVision 2026</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -18,33 +16,36 @@
 }
 
 body{
-  background:#f6f8f7;
-  color:#142014;
-  line-height:1.6;
+  background:#f7f9f8;
+  color:#102010;
+  scroll-behavior:smooth;
 }
 
-/* topo */
+/* NAV */
 nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(10,20,10,0.75);
-  backdrop-filter: blur(10px);
-  padding:12px;
+  background:rgba(8,20,10,0.8);
+  backdrop-filter: blur(12px);
+  padding:14px;
   text-align:center;
   z-index:1000;
 }
 
 nav a{
   color:white;
+  margin:0 12px;
   text-decoration:none;
-  margin:0 10px;
   font-size:14px;
+  font-weight:500;
 }
 
-nav a:hover{color:#2ecc71}
+nav a:hover{
+  color:#2ecc71;
+}
 
-/* hero */
+/* HERO */
 .hero{
   height:100vh;
   display:flex;
@@ -53,95 +54,100 @@ nav a:hover{color:#2ecc71}
   align-items:center;
   text-align:center;
   color:white;
-  padding:20px;
 
   background:
-  linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
   url('https://images.unsplash.com/photo-1523741543316-beb7fc7023d8') center/cover;
 }
 
 .hero h1{
-  font-size:58px;
+  font-size:64px;
+  letter-spacing:1px;
 }
 
 .hero p{
-  max-width:700px;
-  margin-top:10px;
+  max-width:720px;
   font-size:18px;
   opacity:0.9;
+  margin-top:10px;
 }
 
-/* sections */
+/* SEÇÕES */
 section{
-  max-width:1100px;
-  margin:90px auto;
+  max-width:1150px;
+  margin:100px auto;
   padding:20px;
 }
 
 h2{
-  font-size:26px;
-  border-left:5px solid #2ecc71;
-  padding-left:10px;
-  margin-bottom:20px;
+  font-size:28px;
+  border-left:6px solid #2ecc71;
+  padding-left:12px;
+  margin-bottom:25px;
 }
 
-/* cards */
+/* CARDS */
 .card{
   background:white;
-  border-radius:14px;
-  padding:20px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  border-radius:16px;
+  padding:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.3s;
 }
 
-/* grid */
+.card:hover{
+  transform:translateY(-4px);
+}
+
+/* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:15px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px;
 }
 
-/* mapa real */
-.map{
-  height:350px;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 8px 25px rgba(0,0,0,0.1);
-}
-
-/* stats */
+/* STATS */
 .stats{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
   text-align:center;
 }
 
 .stat{
   background:white;
-  padding:20px;
-  border-radius:14px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  padding:25px;
+  border-radius:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .stat h3{
+  font-size:34px;
   color:#2ecc71;
-  font-size:30px;
 }
 
-/* footer */
+/* MAPA */
+.map{
+  height:380px;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
 footer{
-  background:#0f1a0f;
+  background:#0d1a0f;
   color:white;
   text-align:center;
-  padding:40px;
-  margin-top:80px;
+  padding:50px;
+  margin-top:100px;
+  font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="#inicio">Início</a>
   <a href="#contexto">Contexto</a>
@@ -154,48 +160,47 @@ footer{
 <div class="hero" id="inicio">
   <h1>AgroVision 2026 🌱</h1>
   <p>
-    Tecnologia aplicada à agricultura sustentável para otimizar recursos,
-    aumentar produtividade e reduzir impactos ambientais.
+    Sistema inteligente de agricultura sustentável voltado à otimização de recursos,
+    aumento de produtividade e preservação ambiental em escala global.
   </p>
 </div>
 
 <!-- CONTEXTO -->
 <section id="contexto">
-  <h2>Contexto</h2>
+  <h2>Visão do projeto</h2>
   <div class="card">
     <p>
-      A agricultura moderna enfrenta desafios relacionados ao uso de recursos naturais,
-      produtividade e sustentabilidade. O AgroVision 2026 propõe integrar tecnologia
-      ao campo para tomada de decisão inteligente.
+      O AgroVision 2026 integra tecnologia, dados e sustentabilidade para transformar
+      a forma como a agricultura é planejada e executada.
     </p>
   </div>
 </section>
 
 <!-- IMPACTO -->
 <section id="impacto">
-  <h2>Impacto esperado</h2>
+  <h2>Indicadores de impacto</h2>
 
   <div class="stats">
     <div class="stat">
-      <h3>40%</h3>
-      <p>Menos desperdício de água</p>
+      <h3>↓ 45%</h3>
+      <p>Consumo de água</p>
     </div>
 
     <div class="stat">
-      <h3>70%</h3>
-      <p>Aumento de eficiência</p>
+      <h3>↑ 72%</h3>
+      <p>Eficiência produtiva</p>
     </div>
 
     <div class="stat">
-      <h3>85%</h3>
-      <p>Maior sustentabilidade</p>
+      <h3>↑ 88%</h3>
+      <p>Sustentabilidade</p>
     </div>
   </div>
 </section>
 
 <!-- MAPA -->
 <section>
-  <h2>Mapa de monitoramento</h2>
+  <h2>Monitoramento geográfico</h2>
   <div class="map">
     <iframe
       src="https://www.openstreetmap.org/export/embed.html"
@@ -206,35 +211,29 @@ footer{
 
 <!-- PROBLEMAS -->
 <section id="problemas">
-  <h2>Problemas</h2>
+  <h2>Desafios globais</h2>
+
   <div class="grid">
-    <div class="card">🌱 Uso excessivo de recursos naturais</div>
+    <div class="card">🌱 Uso intensivo de recursos naturais</div>
     <div class="card">🌍 Impacto ambiental crescente</div>
-    <div class="card">📉 Baixa automação agrícola</div>
+    <div class="card">📉 Baixa digitalização do campo</div>
   </div>
 </section>
 
 <!-- SOLUÇÕES -->
 <section id="solucoes">
-  <h2>Soluções</h2>
+  <h2>Soluções propostas</h2>
+
   <div class="grid">
-    <div class="card">📡 Sensores inteligentes no solo</div>
-    <div class="card">💧 Irrigação automatizada</div>
-    <div class="card">🧠 Análise de dados agrícolas</div>
+    <div class="card">📡 Agricultura baseada em sensores</div>
+    <div class="card">💧 Irrigação inteligente automatizada</div>
+    <div class="card">🧠 Análise de dados em tempo real</div>
   </div>
 </section>
 
-<!-- CRÉDITOS -->
-<section>
-  <h2>Créditos</h2>
-  <div class="card">
-    <p><b>Desenvolvedor:</b> Bruno Fahr</p>
-    <p><b>Escola:</b> Colégio Estadual Jorge Queiroz Netto</p>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
-AgroVision 2026 • Projeto Agrinho • Agricultura Inteligente e Sustentável
+AgroVision 2026 • Projeto Agrinho • Sistema Global de Agricultura Inteligente
 </footer>
 
 </body>
