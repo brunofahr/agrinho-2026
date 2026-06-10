@@ -5,33 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AgroVision 2026</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{
+*{
   margin:0;
-  font-family:Arial;
-  background:#f5f7f5;
-  color:#1b2a1b;
-  overflow-x:hidden;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Inter, Arial, sans-serif;
 }
 
-/* PARTÍCULAS */
-#particles{
+body{
+  background:#f6f8f7;
+  color:#142014;
+  line-height:1.6;
+}
+
+/* topo */
+nav{
   position:fixed;
+  top:0;
   width:100%;
-  height:100%;
-  z-index:-1;
-  background: radial-gradient(circle, #2ecc71 1px, transparent 1px);
-  background-size:40px 40px;
-  opacity:0.08;
-  animation: move 20s linear infinite;
+  background:rgba(10,20,10,0.75);
+  backdrop-filter: blur(10px);
+  padding:12px;
+  text-align:center;
+  z-index:1000;
 }
 
-@keyframes move{
-  from{transform:translateY(0);}
-  to{transform:translateY(-200px);}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+  font-size:14px;
 }
 
-/* HERO */
+nav a:hover{color:#2ecc71}
+
+/* hero */
 .hero{
   height:100vh;
   display:flex;
@@ -40,120 +53,172 @@ body{
   align-items:center;
   text-align:center;
   color:white;
+  padding:20px;
+
   background:
   linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
   url('https://images.unsplash.com/photo-1523741543316-beb7fc7023d8') center/cover;
 }
 
-.hero h1{font-size:60px;}
-.hero p{max-width:700px}
+.hero h1{
+  font-size:58px;
+}
 
-/* SEÇÕES */
+.hero p{
+  max-width:700px;
+  margin-top:10px;
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* sections */
 section{
   max-width:1100px;
-  margin:100px auto;
+  margin:90px auto;
   padding:20px;
 }
 
 h2{
-  border-left:6px solid #2ecc71;
-  padding-left:12px;
+  font-size:26px;
+  border-left:5px solid #2ecc71;
+  padding-left:10px;
+  margin-bottom:20px;
 }
 
-/* CARDS */
+/* cards */
 .card{
   background:white;
+  border-radius:14px;
   padding:20px;
-  border-radius:12px;
-  margin-top:15px;
-  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
 }
 
-/* GRID */
+/* grid */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:15px;
 }
 
-/* MAPA SIMULADO */
+/* mapa real */
 .map{
-  height:300px;
-  border-radius:12px;
-  background:
-    linear-gradient(135deg,#2ecc71,#27ae60);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:white;
-  font-size:20px;
+  height:350px;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 8px 25px rgba(0,0,0,0.1);
 }
 
-/* FOOTER */
+/* stats */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  text-align:center;
+}
+
+.stat{
+  background:white;
+  padding:20px;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.stat h3{
+  color:#2ecc71;
+  font-size:30px;
+}
+
+/* footer */
 footer{
+  background:#0f1a0f;
+  color:white;
   text-align:center;
   padding:40px;
-  background:#122112;
-  color:white;
+  margin-top:80px;
 }
 </style>
 </head>
 
 <body>
 
-<div id="particles"></div>
+<!-- NAV -->
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#contexto">Contexto</a>
+  <a href="#impacto">Impacto</a>
+  <a href="#problemas">Problemas</a>
+  <a href="#solucoes">Soluções</a>
+</nav>
 
 <!-- HERO -->
-<div class="hero">
+<div class="hero" id="inicio">
   <h1>AgroVision 2026 🌱</h1>
-  <p>Um sistema integrado de tecnologia agrícola, sustentabilidade e inovação para o futuro da produção rural.</p>
+  <p>
+    Tecnologia aplicada à agricultura sustentável para otimizar recursos,
+    aumentar produtividade e reduzir impactos ambientais.
+  </p>
 </div>
 
 <!-- CONTEXTO -->
-<section>
-  <h2>Contexto científico</h2>
+<section id="contexto">
+  <h2>Contexto</h2>
   <div class="card">
     <p>
-      A agricultura moderna exige equilíbrio entre produtividade e preservação ambiental.
-      O AgroVision 2026 propõe uma abordagem baseada em tecnologia para otimizar recursos naturais.
+      A agricultura moderna enfrenta desafios relacionados ao uso de recursos naturais,
+      produtividade e sustentabilidade. O AgroVision 2026 propõe integrar tecnologia
+      ao campo para tomada de decisão inteligente.
     </p>
   </div>
 </section>
 
-<!-- MAPA INTERATIVO -->
-<section>
-  <h2>Mapa de monitoramento agrícola</h2>
-  <div class="map">
-    🌍 Regiões agrícolas monitoradas em tempo real (simulação visual)
+<!-- IMPACTO -->
+<section id="impacto">
+  <h2>Impacto esperado</h2>
+
+  <div class="stats">
+    <div class="stat">
+      <h3>40%</h3>
+      <p>Menos desperdício de água</p>
+    </div>
+
+    <div class="stat">
+      <h3>70%</h3>
+      <p>Aumento de eficiência</p>
+    </div>
+
+    <div class="stat">
+      <h3>85%</h3>
+      <p>Maior sustentabilidade</p>
+    </div>
   </div>
 </section>
 
-<!-- GRÁFICO REAL -->
+<!-- MAPA -->
 <section>
-  <h2>Impacto do projeto</h2>
-
-  <div class="card">
-    <canvas id="grafico"></canvas>
+  <h2>Mapa de monitoramento</h2>
+  <div class="map">
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html"
+      style="width:100%; height:100%; border:none;">
+    </iframe>
   </div>
 </section>
 
 <!-- PROBLEMAS -->
-<section>
-  <h2>Problemas globais</h2>
-
+<section id="problemas">
+  <h2>Problemas</h2>
   <div class="grid">
-    <div class="card">🌱 Desperdício de recursos naturais</div>
+    <div class="card">🌱 Uso excessivo de recursos naturais</div>
     <div class="card">🌍 Impacto ambiental crescente</div>
     <div class="card">📉 Baixa automação agrícola</div>
   </div>
 </section>
 
 <!-- SOLUÇÕES -->
-<section>
-  <h2>Soluções tecnológicas</h2>
-
+<section id="solucoes">
+  <h2>Soluções</h2>
   <div class="grid">
-    <div class="card">📡 Sensores inteligentes</div>
+    <div class="card">📡 Sensores inteligentes no solo</div>
     <div class="card">💧 Irrigação automatizada</div>
     <div class="card">🧠 Análise de dados agrícolas</div>
   </div>
@@ -169,29 +234,8 @@ footer{
 </section>
 
 <footer>
-AgroVision 2026 • Projeto Agrinho
+AgroVision 2026 • Projeto Agrinho • Agricultura Inteligente e Sustentável
 </footer>
-
-<!-- GRÁFICO SCRIPT -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-const ctx = document.getElementById('grafico');
-
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Água', 'Produtividade', 'Desperdício', 'Sustentabilidade'],
-    datasets: [{
-      label: 'Impacto (%)',
-      data: [40, 80, 35, 90],
-      backgroundColor: '#2ecc71'
-    }]
-  },
-  options: {
-    responsive: true
-  }
-});
-</script>
 
 </body>
 </html>
